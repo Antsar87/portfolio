@@ -1,0 +1,61 @@
+@use '../abstracs/mixins' as *;
+@use '../abstracs/color' as *;
+
+.navbar {
+  &__box-logo {
+    img {
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  &__box-hamburger {
+    background: $gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    button {
+      background: none;
+      border: none;
+    }
+  }
+}
+
+.slide-nav {
+  position: fixed;
+  top: 0;
+  right: -700px;
+  transition: all 1s;
+  width: 50%;
+  height: 100vh;
+  background: red;
+
+  @include for-size('tablet-portrait-up') {
+    width: 500px;
+  }
+}
+
+.overScreen {
+  position: fixed;
+  transition: all 1s;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  z-index: -1;
+}
+
+.overScreenShow {
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.397);
+}
+
+.slide-navShow {
+  right: 0;
+  z-index: 1000;
+}
