@@ -3,6 +3,8 @@
 
 .navbar {
   &__box-logo {
+    text-decoration: none;
+    color: $black;
     img {
       height: 15rem;
       object-fit: cover;

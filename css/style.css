@@ -64,6 +64,10 @@ button {
   margin-top: 3rem;
 }
 
+.mT-auto {
+  margin-top: auto;
+}
+
 .container {
   padding: 0 1rem;
   margin: 0 auto;
@@ -194,6 +198,10 @@ button {
   border-radius: 10rem;
 }
 
+.navbar__box-logo {
+  text-decoration: none;
+  color: #262525;
+}
 .navbar__box-logo img {
   height: 15rem;
   object-fit: cover;
@@ -313,6 +321,52 @@ button {
 }
 .gallery main a {
   display: inline-block;
+}
+
+.moreAboutMe {
+  justify-content: space-between;
+  margin-top: 10rem;
+}
+@media (min-width: 600px) {
+  .moreAboutMe {
+    display: flex;
+  }
+}
+.moreAboutMe__box-content {
+  flex: 1 0 10rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.moreAboutMe__box-content h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.moreAboutMe__box-content p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.moreAboutMe__box-content ul {
+  list-style: none;
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+.moreAboutMe__box-content ul li:last-child {
+  margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .moreAboutMe__box-content {
+    padding-left: 10rem;
+  }
+}
+.moreAboutMe__box-img {
+  flex: 1 0 10rem;
+  text-align: center;
+}
+.moreAboutMe__box-img img {
+  width: 40rem;
 }
 
 /*# sourceMappingURL=style.css.map */
