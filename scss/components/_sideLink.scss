@@ -1,0 +1,24 @@
+@use '../abstracs/color' as *;
+@use '../abstracs/mixins' as *;
+
+.sideLink {
+
+  @include for-size('tablet-landscape-up') {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -10rem;
+    top: 50%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $yellow;
+    font-size: 4rem;
+    font-weight: 900;
+
+    span {
+      border-bottom: 7px solid $yellow;
+      color: $black;
+    }
+  }
+}

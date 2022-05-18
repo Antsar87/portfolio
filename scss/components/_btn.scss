@@ -1,0 +1,21 @@
+@use "../abstracs/color" as *;
+
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    font-size: 2.5rem;
+    padding: 1.5rem 2.5rem;
+
+    &--white {
+        color: $black;
+    }
+
+    &--yellow {
+        background: $yellow;
+    }
+
+    &--radius {
+        border-radius: 10rem;
+    }
+}

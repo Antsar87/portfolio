@@ -1,0 +1,9 @@
+@use '../abstracs/color' as *;
+
+.footer {
+  border-top: 1px solid $gray;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 8rem;
+  font-size: 2rem;
+}

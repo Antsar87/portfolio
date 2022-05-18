@@ -2,5 +2,12 @@
 
 @use 'base/utilities';
 
-@use 'layout/navigation';
+@use 'components/underLine';
+@use 'components/sideLink';
+@use "components/card";
+@use "components/btn";
 
+@use 'layout/navigation';
+@use 'layout/footer';
+
+@use 'pages/home';

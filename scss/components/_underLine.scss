@@ -1,0 +1,16 @@
+@use "../abstracs/color" as *;
+
+.underLine {
+    position: relative;
+    margin-bottom: 4rem;
+
+    &::after {
+        content: "";
+        background-color: $yellow;
+        height: .5rem;
+        width: 4rem;
+        position: absolute;
+        left: 0;
+        bottom: -3rem;
+    }
+}
