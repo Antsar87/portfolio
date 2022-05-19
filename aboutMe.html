@@ -10,17 +10,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- css -->
     <script src="js/script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
       rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/42a32db0e6.js"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous"
-      defer
-    ></script>
+      referrerpolicy="no-referrer"
+    />
+
     <title>Document</title>
   </head>
   <body>
@@ -47,17 +44,19 @@
     <div class="overScreen"></div>
     <div class="slide-nav">
       <div class="slide-nav__box-close">
-        <button class="btn-close btn--yellow">x</button>
+        <button class="btn-close btn--yellow">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
       <ul>
         <li>
           <a href="#">WORK</a>
         </li>
         <li class="mY-30">
-          <a href="#">ABOUT</a>
+          <a href="aboutMe.html">ABOUT</a>
         </li>
         <li>
-          <a href="#">CONTACT</a>
+          <a href="getInTouch.html">CONTACT</a>
         </li>
       </ul>
     </div>
@@ -104,10 +103,15 @@
     <footer class="container d-flex justify-sb footer">
       <p>@ 2022 SAYAMPHUM (MARC) T.</p>
 
-      <ul>
+      <ul class="d-flex g-2">
         <li>
           <a href="#">
             <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin-in"></i>
           </a>
         </li>
       </ul>

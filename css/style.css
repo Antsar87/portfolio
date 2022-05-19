@@ -1,13 +1,19 @@
+@font-face {
+  font-family: futura;
+  src: url(../font/FuturaPTMedium.otf);
+}
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: "Questrial", sans-serif;
+  font-family: futura, sans-serif;
   font-size: 31.25%;
+  color: #333331;
 }
 @media (min-width: 400px) {
   html {
@@ -19,7 +25,7 @@ html {
     font-size: 50%;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   html {
     font-size: 62.5%;
   }
@@ -51,6 +57,10 @@ button {
   justify-content: space-between;
 }
 
+.g-2 {
+  gap: 2rem;
+}
+
 .d-block {
   display: block;
 }
@@ -58,6 +68,10 @@ button {
 .mY-30 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.mT-2 {
+  margin-top: 2rem;
 }
 
 .mT-30 {
@@ -83,12 +97,20 @@ button {
   }
 }
 
+.fs-2 {
+  font-size: 2rem !important;
+}
+
 .fw-700 {
   font-weight: 700;
 }
 
 .txt-center {
   text-align: center;
+}
+
+.txt-end {
+  text-align: end;
 }
 
 .underLine {
@@ -171,10 +193,10 @@ button {
   text-transform: uppercase;
 }
 .card__content h2 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .card__content p {
-  font-size: 3rem;
+  font-size: 2rem;
   text-decoration: underline;
 }
 .card:hover .card__content {
@@ -197,6 +219,10 @@ button {
 .btn--radius {
   border-radius: 10rem;
 }
+.btn--transparent {
+  background: transparent;
+  border: 1px solid #262525;
+}
 
 .navbar__box-logo {
   text-decoration: none;
@@ -209,7 +235,9 @@ button {
 .navbar__content {
   font-size: 2rem;
 }
-.navbar__box-hamburger {
+.navbar__box-hamburger button {
+  background: none;
+  border: none;
   background: #e6e7e6;
   width: 5rem;
   height: 5rem;
@@ -219,10 +247,6 @@ button {
   justify-content: center;
   cursor: pointer;
 }
-.navbar__box-hamburger button {
-  background: none;
-  border: none;
-}
 
 .slide-nav {
   z-index: 1000;
@@ -230,7 +254,7 @@ button {
   position: fixed;
   top: 0;
   right: -70rem;
-  width: 30%;
+  width: 40%;
   height: 100vh;
   transition: all 1s;
   background: #e6e7e6;
@@ -241,11 +265,9 @@ button {
 .slide-nav__box-close button {
   font-size: 3rem;
   font-weight: 700;
-  width: 5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
   border-radius: 50%;
   border: none;
+  padding: 0.7rem 1.5rem;
 }
 .slide-nav ul {
   list-style: none;
@@ -288,6 +310,12 @@ button {
   margin-top: 8rem;
   font-size: 2rem;
 }
+.footer ul {
+  list-style: none;
+}
+.footer ul li a {
+  color: #262525;
+}
 
 .bigImage img {
   height: 40rem;
@@ -302,9 +330,11 @@ button {
 }
 .authorSection main h1 {
   font-size: 10rem;
+  font-weight: 500;
 }
 .authorSection main h2 {
   font-size: 3rem;
+  font-weight: 300;
 }
 
 .gallery main {
@@ -367,6 +397,36 @@ button {
 }
 .moreAboutMe__box-img img {
   width: 40rem;
+}
+
+.formSection__form {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .formSection__form .box {
+    display: flex;
+    gap: 5rem;
+  }
+}
+.formSection__form .box div {
+  width: 100%;
+  margin-top: 2rem;
+}
+@media (min-width: 600px) {
+  .formSection__form .box div {
+    margin-top: 0;
+  }
+}
+.formSection__form label {
+  font-size: 2rem;
+}
+.formSection__form input,
+.formSection__form textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

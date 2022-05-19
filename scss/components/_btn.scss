@@ -18,4 +18,9 @@
     &--radius {
         border-radius: 10rem;
     }
+
+    &--transparent {
+        background: transparent;
+        border: 1px solid $black;
+    }
 }

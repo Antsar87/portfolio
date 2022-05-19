@@ -1,0 +1,36 @@
+@use '../abstracs/mixins' as *;
+
+.formSection {
+  &__form {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    .box {
+      @include for-size('tablet-portrait-up') {
+        display: flex;
+        gap: 5rem;
+      }
+
+      div {
+        width: 100%;
+        margin-top: 2rem;
+
+        @include for-size('tablet-portrait-up') {
+          margin-top: 0;
+        }
+      }
+    }
+
+    label {
+      font-size: 2rem;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      resize: none;
+    }
+  }
+}

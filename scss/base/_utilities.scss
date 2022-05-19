@@ -15,6 +15,10 @@
 .justify-sb {
   justify-content: space-between;
 }
+
+.g-2 {
+  gap: 2rem;
+}
 // Flex
 
 .d-block {
@@ -25,6 +29,10 @@
 .mY-30 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.mT-2 {
+  margin-top: 2rem;
 }
 
 .mT-30 {
@@ -48,10 +56,18 @@
   }
 }
 
+.fs-2{
+  font-size: 2rem !important;
+}
+
 .fw-700 {
   font-weight: 700;
 }
 
 .txt-center {
   text-align: center;
+}
+
+.txt-end {
+  text-align: end;
 }

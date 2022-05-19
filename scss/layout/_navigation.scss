@@ -16,18 +16,17 @@
   }
 
   &__box-hamburger {
-    background: $gray;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
     button {
       background: none;
       border: none;
+      background: $gray;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
   }
 }
@@ -38,7 +37,7 @@
   position: fixed;
   top: 0;
   right: -70rem;
-  width: 30%;
+  width: 40%;
   height: 100vh;
   transition: all 1s;
   background: $gray;
@@ -48,11 +47,9 @@
     button {
       font-size: 3rem;
       font-weight: 700;
-      width: 5rem;
-      padding-top: 0.5rem;
-      padding-bottom: 1rem;
       border-radius: 50%;
       border: none;
+      padding: .7rem 1.5rem;
     }
   }
 
