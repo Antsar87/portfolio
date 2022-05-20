@@ -1,7 +1,15 @@
 @use "../abstracs/mixins" as *;
 
 .ads {
-  padding: 0 2rem;
+  padding: 4rem 2rem;
+
+  &.bg-gray {
+    background: #e6e7e6;
+  }
+
+  & > div {
+    padding:  0 2rem;
+  }
 
   &__box {
     padding: 0 3rem;

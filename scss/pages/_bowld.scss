@@ -12,8 +12,19 @@
   justify-content: center;
   gap: 2rem;
   margin-top: 5rem;
-
   @include flex-responsive;
+
+  &.information-cafe {
+
+    gap: 7rem;
+    
+    .information__box-image {
+      flex-basis: 15rem;
+      img {
+        height: 50rem;
+      }
+    }
+  }
 
   main {
     flex: 1;
@@ -40,7 +51,7 @@
 }
 
 .bigImage-2 {
-  padding: 0 2rem;
+  padding: 4rem 2rem;
   overflow: hidden;
 
   div {
