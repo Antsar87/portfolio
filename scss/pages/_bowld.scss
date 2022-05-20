@@ -1,0 +1,164 @@
+@use '../abstracs/mixins' as *;
+@use '../abstracs/color' as *;
+
+@mixin flex-responsive {
+  @include for-size(40rem) {
+    display: flex;
+  }
+}
+
+.information {
+  padding: 0 2rem;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+
+  @include flex-responsive;
+
+  main {
+    flex: 1;
+  }
+
+  &__box-image {
+    img {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+
+  &__box-content {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      padding-left: 3rem;
+    }
+  }
+}
+
+.bigImage-2 {
+  padding: 0 2rem;
+  overflow: hidden;
+
+  div {
+    margin-top: 10rem;
+
+    padding: 0 3rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.sectionLogo {
+  padding: 0 2rem;
+
+  &__box {
+    padding: 0 3rem;
+    margin-top: 10rem;
+    align-items: center;
+    gap: 4rem;
+
+    @include flex-responsive;
+
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .sectionLogo__content {
+      font-size: 2rem;
+      margin-top: 2rem;
+
+      @include for-size(50rem) {
+        margin-top: 0;
+      }
+
+      ul {
+        li {
+          gap: 2rem;
+
+          main {
+            p {
+              font-weight: 300;
+
+              &:nth-child(2) {
+                margin: 0.5rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sectionLogo__content-square {
+      width: 9rem;
+
+      &--purple {
+        background-color: #622a69;
+      }
+
+      &--pink {
+        background-color: #a03861;
+      }
+
+      &--yellow {
+        background-color: #ecc15d;
+      }
+    }
+  }
+}
+
+.presentations {
+  margin-top: 10rem;
+  padding: 2rem 2rem;
+  &.bg-purple {
+    background: url(../images/bg2.png) center center / cover;
+  }
+
+  &.bg-pink {
+    background: url(../images/bg3.png);
+  }
+
+  &.bg-yellow {
+    background: url(../images/cup.png) center center / cover;
+    height: 80rem;
+  }
+
+  &__box {
+    position: relative;
+    padding: 5rem 3rem;
+    @include flex-responsive;
+    justify-content: center;
+    gap: 3rem;
+
+    .sideLink {
+      bottom: 0;
+      right: 5rem;
+      a {
+        font-size: 2rem;
+
+        span {
+          border-bottom: 0.4rem solid $yellow;
+          color: white;
+        }
+      }
+    }
+
+    &.presentations__box--imgFixes {
+      img {
+        height: 60rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

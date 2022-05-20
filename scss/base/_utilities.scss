@@ -1,5 +1,10 @@
 @use '../abstracs/mixins' as *;
 
+
+.c-white {
+  color: white;
+}
+
 .d-flex {
   display: flex;
 }
@@ -35,12 +40,30 @@
   margin-top: 2rem;
 }
 
+.mT-10 {
+  margin-top: 10rem !important;
+}
+
 .mT-30 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
+}
+
+.mT-40 {
+  margin-top: 4rem !important;
 }
 
 .mT-auto {
   margin-top: auto;
+}
+
+// padding
+.pT-10{
+  padding-top: 10rem;
+}
+
+.pX-3 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
 }
 
 .container {
@@ -56,8 +79,27 @@
   }
 }
 
+.container-10 {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.container-90 {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+
 .fs-2{
   font-size: 2rem !important;
+}
+
+.fs-4 {
+  font-size: 4rem !important;
+}
+
+.fw-300 {
+  font-weight: 300!important;
 }
 
 .fw-700 {

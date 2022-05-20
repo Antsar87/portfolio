@@ -23,5 +23,9 @@
     @media (min-width: 1800px) {
       @content;
     }
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
   }
 }

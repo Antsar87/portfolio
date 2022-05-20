@@ -1,0 +1,24 @@
+@use "../abstracs/mixins" as *;
+
+.ads {
+  padding: 0 2rem;
+
+  &__box {
+    padding: 0 3rem;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+
+    @include for-size(500px){
+        grid-template-columns: 30% 70%;
+        grid-auto-rows: 37rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

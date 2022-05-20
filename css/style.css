@@ -25,7 +25,7 @@ html {
     font-size: 50%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   html {
     font-size: 62.5%;
   }
@@ -39,6 +39,10 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.c-white {
+  color: white;
 }
 
 .d-flex {
@@ -74,12 +78,29 @@ button {
   margin-top: 2rem;
 }
 
+.mT-10 {
+  margin-top: 10rem !important;
+}
+
 .mT-30 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
+}
+
+.mT-40 {
+  margin-top: 4rem !important;
 }
 
 .mT-auto {
   margin-top: auto;
+}
+
+.pT-10 {
+  padding-top: 10rem;
+}
+
+.pX-3 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
 }
 
 .container {
@@ -97,8 +118,26 @@ button {
   }
 }
 
+.container-10 {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.container-90 {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
 .fs-2 {
   font-size: 2rem !important;
+}
+
+.fs-4 {
+  font-size: 4rem !important;
+}
+
+.fw-300 {
+  font-weight: 300 !important;
 }
 
 .fw-700 {
@@ -250,7 +289,7 @@ button {
 
 .slide-nav {
   z-index: 1000;
-  padding: 2rem 5rem;
+  padding: 2rem;
   position: fixed;
   top: 0;
   right: -70rem;
@@ -280,7 +319,7 @@ button {
 }
 @media (min-width: 600px) {
   .slide-nav {
-    width: 25rem;
+    width: 33rem;
   }
 }
 
@@ -301,6 +340,127 @@ button {
 
 .slide-navShow {
   right: 0;
+}
+
+.header {
+  padding: 0 2rem;
+}
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    gap: 4rem;
+    padding: 0;
+    margin-top: -42.5rem;
+  }
+}
+.header__box-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30rem 15rem;
+  gap: 2rem;
+}
+@media (min-width: 1000px) {
+  .header__box-images {
+    border-right: 2px solid #262525;
+    padding-right: 6rem;
+  }
+}
+.header__box-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header__box-images img:last-child {
+  grid-column: 1/-1;
+}
+.header__box-content {
+  margin-top: 2rem;
+}
+@media (min-width: 1000px) {
+  .header__box-content {
+    margin: 0;
+  }
+}
+.header__box-content ul {
+  list-style: none;
+}
+.header__box-content ul li:not(:first-child) {
+  margin-top: 3.5rem;
+}
+.header__box-content ul li h2 {
+  font-size: 2rem;
+}
+.header__box-content ul li p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.side {
+  position: sticky;
+  top: 0;
+  padding-top: 7rem;
+  display: none;
+}
+@media (min-width: 1000px) {
+  .side {
+    display: block;
+  }
+}
+
+.title-side {
+  font-size: 2rem;
+  display: inline-block;
+  transform: rotate(-90deg);
+  margin-left: -11rem;
+  margin-top: 15rem;
+  text-align: end;
+}
+.title-side h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+.title-side p {
+  display: inline-block;
+  border: 3px solid #262525;
+  padding: 1rem;
+}
+
+.button-side {
+  text-align: end;
+  padding-top: 10rem;
+}
+.button-side button {
+  transform: rotate(90deg);
+  color: #ecc15d;
+  background-color: #262525;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  margin-right: -2rem;
+}
+
+.ads {
+  padding: 0 2rem;
+}
+.ads__box {
+  padding: 0 3rem;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1rem;
+}
+@media (min-width: 500px) {
+  .ads__box {
+    grid-template-columns: 30% 70%;
+    grid-auto-rows: 37rem;
+  }
+}
+.ads__box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .footer {
@@ -399,14 +559,10 @@ button {
   width: 40rem;
 }
 
-.formSection__form {
-  max-width: 90rem;
-  margin: 0 auto;
-}
 @media (min-width: 600px) {
   .formSection__form .box {
     display: flex;
-    gap: 5rem;
+    gap: 3rem;
   }
 }
 .formSection__form .box div {
@@ -427,6 +583,141 @@ button {
   width: 100%;
   padding: 1rem 2rem;
   resize: none;
+  border: 1px solid #e6e7e6;
+}
+.formSection__form textarea {
+  height: 15rem;
+}
+
+.information {
+  padding: 0 2rem;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+@media (min-width: 40rem) {
+  .information {
+    display: flex;
+  }
+}
+.information main {
+  flex: 1;
+}
+.information__box-image img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.information__box-content h2 {
+  font-size: 3rem;
+}
+.information__box-content p {
+  font-size: 1.5rem;
+  padding-left: 3rem;
+}
+
+.bigImage-2 {
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.bigImage-2 div {
+  margin-top: 10rem;
+  padding: 0 3rem;
+}
+.bigImage-2 img {
+  width: 100%;
+}
+
+.sectionLogo {
+  padding: 0 2rem;
+}
+.sectionLogo__box {
+  padding: 0 3rem;
+  margin-top: 10rem;
+  align-items: center;
+  gap: 4rem;
+}
+@media (min-width: 40rem) {
+  .sectionLogo__box {
+    display: flex;
+  }
+}
+.sectionLogo__box-img img {
+  width: 100%;
+}
+.sectionLogo__box .sectionLogo__content {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+@media (min-width: 50rem) {
+  .sectionLogo__box .sectionLogo__content {
+    margin-top: 0;
+  }
+}
+.sectionLogo__box .sectionLogo__content ul li {
+  gap: 2rem;
+}
+.sectionLogo__box .sectionLogo__content ul li main p {
+  font-weight: 300;
+}
+.sectionLogo__box .sectionLogo__content ul li main p:nth-child(2) {
+  margin: 0.5rem 0;
+}
+.sectionLogo__box .sectionLogo__content-square {
+  width: 9rem;
+}
+.sectionLogo__box .sectionLogo__content-square--purple {
+  background-color: #622a69;
+}
+.sectionLogo__box .sectionLogo__content-square--pink {
+  background-color: #a03861;
+}
+.sectionLogo__box .sectionLogo__content-square--yellow {
+  background-color: #ecc15d;
+}
+
+.presentations {
+  margin-top: 10rem;
+  padding: 2rem 2rem;
+}
+.presentations.bg-purple {
+  background: url(../images/bg2.png) center center/cover;
+}
+.presentations.bg-pink {
+  background: url(../images/bg3.png);
+}
+.presentations.bg-yellow {
+  background: url(../images/cup.png) center center/cover;
+  height: 80rem;
+}
+.presentations__box {
+  position: relative;
+  padding: 5rem 3rem;
+  justify-content: center;
+  gap: 3rem;
+}
+@media (min-width: 40rem) {
+  .presentations__box {
+    display: flex;
+  }
+}
+.presentations__box .sideLink {
+  bottom: 0;
+  right: 5rem;
+}
+.presentations__box .sideLink a {
+  font-size: 2rem;
+}
+.presentations__box .sideLink a span {
+  border-bottom: 0.4rem solid #ecc15d;
+  color: white;
+}
+.presentations__box.presentations__box--imgFixes img {
+  height: 60rem;
+}
+.presentations__box img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

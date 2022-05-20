@@ -8,8 +8,12 @@
 @use "components/btn";
 
 @use 'layout/navigation';
+@use "layout/header";
+@use "layout/side";
+@use "layout/ads";
 @use 'layout/footer';
 
 @use 'pages/home';
 @use "pages/aboutMe";
 @use "pages/form";
+@use "pages/bowld";

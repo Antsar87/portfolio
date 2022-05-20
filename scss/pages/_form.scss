@@ -1,14 +1,14 @@
 @use '../abstracs/mixins' as *;
+@use "../abstracs/color" as *;
 
 .formSection {
   &__form {
-    max-width: 90rem;
-    margin: 0 auto;
+  
 
     .box {
       @include for-size('tablet-portrait-up') {
         display: flex;
-        gap: 5rem;
+        gap: 3rem;
       }
 
       div {
@@ -31,6 +31,11 @@
       width: 100%;
       padding: 1rem 2rem;
       resize: none;
+      border: 1px solid $gray;
+    }
+
+    textarea {
+      height: 15rem;
     }
   }
 }

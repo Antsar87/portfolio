@@ -28,7 +28,7 @@ btnMore.addEventListener('click', (e) => {
 
   console.log(btnMore.textContent);
 
-  if (btnMore.textContent === 'SHOW MORE') {
+  if (btnMore.textContent.includes("SHOW MORE")) {
     btnMore.textContent = 'SHOW LESS';
   } else {
     btnMore.textContent = 'SHOW MORE';

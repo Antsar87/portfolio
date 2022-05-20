@@ -27,7 +27,7 @@ html {
     font-size: 50%;
   }
 
-  @include for-size('desktop-up') {
+  @include for-size(1300px) {
     font-size: 62.5%;
   }
 }
