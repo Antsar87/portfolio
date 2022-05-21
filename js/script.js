@@ -15,24 +15,14 @@ btnClose.addEventListener('click', () => {
 
 // navigation
 
-// gallery
-const btnMore = document.querySelector('#more');
-const card = document.querySelectorAll('.card');
+// change color
+const circle = document.querySelectorAll('.circle');
+const wath = document.querySelector('#wath');
 
-btnMore.addEventListener('click', (e) => {
-  card.forEach((e) => {
-    if (e.className.includes('card-none')) {
-      e.classList.toggle('card-active');
-    }
+console.log(wath.src);
+
+circle.forEach((e) => {
+  e.addEventListener('click', () => {
+    wath.src = `../images/${e.id}.png`
   });
-
-  console.log(btnMore.textContent);
-
-  if (btnMore.textContent.includes("SHOW MORE")) {
-    btnMore.textContent = 'SHOW LESS';
-  } else {
-    btnMore.textContent = 'SHOW MORE';
-  }
-
-  btnMore.classList.toggle('btn--yellow');
 });

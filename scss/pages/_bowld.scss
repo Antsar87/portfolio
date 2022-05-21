@@ -15,13 +15,21 @@
   @include flex-responsive;
 
   &.information-cafe {
-
     gap: 7rem;
-    
+
     .information__box-image {
       flex-basis: 15rem;
       img {
         height: 50rem;
+      }
+    }
+  }
+
+  &.information-product {
+    gap: 7rem;
+    .information__box-image {
+      img {
+        height: 45rem;
       }
     }
   }
@@ -67,6 +75,24 @@
 
 .sectionLogo {
   padding: 0 2rem;
+
+  &.sectionLogo--product {
+    img {
+      height: 40rem;
+    }
+
+    .sectionLogo__content {
+      align-self: stretch;
+    }
+
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      justify-content: space-between;
+    }
+  }
 
   &__box {
     padding: 0 3rem;
@@ -121,6 +147,18 @@
       &--yellow {
         background-color: #ecc15d;
       }
+
+      &--blue {
+        background: #2a5280;
+      }
+
+      &--light-blue {
+        background: #4d77b1;
+      }
+
+      &--orange {
+        background: #f78644;
+      }
     }
   }
 }
@@ -128,6 +166,7 @@
 .presentations {
   margin-top: 10rem;
   padding: 2rem 2rem;
+
   &.bg-purple {
     background: url(../images/bg2.png) center center / cover;
   }
@@ -139,6 +178,26 @@
   &.bg-yellow {
     background: url(../images/cup.png) center center / cover;
     height: 80rem;
+  }
+
+  &.bg-blue {
+    background: url(../images/bg.png) center center / cover;
+
+    .sideLink {
+      right: 10rem !important;
+
+      span {
+        color: initial;
+      }
+    }
+
+    main {
+      text-align: center;
+    }
+
+    img {
+      width: 30rem;
+    }
   }
 
   &__box {

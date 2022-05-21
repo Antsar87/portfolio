@@ -1,8 +1,13 @@
 @use '../abstracs/mixins' as *;
+@use "../abstracs/color" as *;
 
 
 .c-white {
   color: white;
+}
+
+.c-black {
+color: $black !important;
 }
 
 .bg-gray {
@@ -38,6 +43,11 @@
 .mY-30 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.mY-40 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .mT-2 {

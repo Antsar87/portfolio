@@ -2,6 +2,7 @@
 @use '../abstracs/mixins' as *;
 
 .side {
+  z-index: -1 !important;
   position: sticky;
   top: 0;
   padding-top: 7rem;
@@ -26,6 +27,10 @@
     h1 {
       font-size: 10rem;
     }
+  }
+
+  &.cafe.wath {
+    margin-left: -12rem ;
   }
 
   h1 {
