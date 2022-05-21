@@ -15,14 +15,25 @@ btnClose.addEventListener('click', () => {
 
 // navigation
 
-// change color
-const circle = document.querySelectorAll('.circle');
-const wath = document.querySelector('#wath');
 
-console.log(wath.src);
+var modal = document.getElementById("myModal");
+var img = document.querySelectorAll('img');
+var modalImg = document.getElementById('img01');
+var captionText = document.getElementById('caption');
 
-circle.forEach((e) => {
-  e.addEventListener('click', () => {
-    wath.src = `../images/${e.id}.png`
-  });
+img.forEach((e) => {
+  e.addEventListener("click", (a) => {
+
+    modal.style.display = 'block';
+    modalImg.src = e.src;
+    captionText.innerHTML = "";
+  }) 
 });
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName('close')[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = 'none';
+};
