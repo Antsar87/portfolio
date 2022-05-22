@@ -23,6 +23,8 @@
 
     label {
       font-size: 2rem;
+      display: inline-block;
+      padding-bottom: 1rem;
     }
 
     input,
@@ -31,7 +33,7 @@
       width: 100%;
       padding: 1rem 2rem;
       resize: none;
-      border: 1px solid $gray;
+      border: 1px solid $black;
     }
 
     textarea {

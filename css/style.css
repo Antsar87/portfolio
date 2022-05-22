@@ -585,6 +585,7 @@ button {
 
 .header {
   padding: 0 2rem;
+  margin-top: 10rem;
 }
 @media (min-width: 1000px) {
   .header {
@@ -707,7 +708,7 @@ button {
 }
 .ads__box {
   padding: 0 3rem;
-  margin-top: 3rem;
+  margin-top: 10rem;
   display: grid;
   grid-template-columns: 100%;
   gap: 1.5rem;
@@ -725,7 +726,7 @@ button {
 
 .footer {
   border-top: 1px solid #e6e7e6;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   margin-top: 8rem;
   font-size: 2rem;
@@ -836,6 +837,8 @@ button {
 }
 .formSection__form label {
   font-size: 2rem;
+  display: inline-block;
+  padding-bottom: 1rem;
 }
 .formSection__form input,
 .formSection__form textarea {
@@ -843,7 +846,7 @@ button {
   width: 100%;
   padding: 1rem 2rem;
   resize: none;
-  border: 1px solid #e6e7e6;
+  border: 1px solid #262525;
 }
 .formSection__form textarea {
   height: 15rem;
@@ -853,7 +856,7 @@ button {
   padding: 0 2rem;
   justify-content: center;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 @media (min-width: 40rem) {
   .information {
@@ -1036,7 +1039,6 @@ button {
   background: #262525;
   color: whitesmoke;
   padding: 10rem 2rem;
-  margin-top: 5rem;
 }
 .product__box {
   margin-top: 5rem;
@@ -1117,6 +1119,7 @@ button {
 
 .gift {
   padding: 0 2rem;
+  margin-top: 5rem;
 }
 .gift .d-flex {
   flex-direction: column;
