@@ -1,17 +1,20 @@
 @use '../abstracs/mixins' as *;
-@use "../abstracs/color" as *;
+@use '../abstracs/color' as *;
 
+.obj-cover {
+  object-fit: cover;
+}
 
 .c-white {
   color: white;
 }
 
 .c-black {
-color: $black !important;
+  color: $black !important;
 }
 
 .bg-gray {
-  background: #e6e7e6;
+  background: #d4d1d1;
 }
 
 .d-flex {
@@ -71,7 +74,7 @@ color: $black !important;
 }
 
 // padding
-.pT-10{
+.pT-10 {
   padding-top: 10rem;
 }
 
@@ -103,17 +106,19 @@ color: $black !important;
   margin: 0 auto;
 }
 
-
-.fs-2{
+.fs-2 {
   font-size: 2rem !important;
 }
 
+.fs-3 {
+  font-size: 3rem !important;
+}
 .fs-4 {
   font-size: 4rem !important;
 }
 
 .fw-300 {
-  font-weight: 300!important;
+  font-weight: 300 !important;
 }
 
 .fw-700 {
@@ -126,4 +131,8 @@ color: $black !important;
 
 .txt-end {
   text-align: end;
+}
+
+.font-didot {
+  font-family: didot;
 }

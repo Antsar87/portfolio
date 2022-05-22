@@ -1,0 +1,90 @@
+@use '../abstracs/mixins' as *;
+
+$purple: #622a69;
+$brown: #a99384;
+
+.logo-box--purple {
+  &__image {
+    border: 1px solid $purple;
+    height: 35rem;
+
+    @include for-size('750px') {
+      width: 50rem;
+      height: 30rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    background-color: $purple;
+    color: white;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+}
+
+.logo-box--brown {
+  &__image {
+    height: 50%;
+
+    img {
+      width: 100%;
+      border: 1px solid $brown;
+      border-bottom: 0;
+      object-fit: cover;
+
+      @include for-size('700px') {
+        height: 100% !important;
+      }
+    }
+  }
+
+  &__content {
+    background: $brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 4rem;
+
+    ul {
+      list-style: none;
+      color: white;
+    }
+
+    &-colors {
+      font-size: 1.5rem;
+      padding-right: 5rem;
+
+      li {
+        &:nth-child(2) {
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    &-names {
+      font-size: 1.6rem;
+      border-left: 2px solid white;
+      padding-left: 5rem;
+
+      li {
+        &:nth-child(2) {
+          margin: 2rem 0;
+        }
+      }
+
+      h3 {
+        font-weight: 400;
+      }
+    }
+  }
+}

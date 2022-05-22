@@ -1,7 +1,10 @@
-@use "../abstracs/mixins" as *;
+@use '../abstracs/mixins' as *;
+
+$brown: #a99384;
+
 
 .visitWebsite {
-  background: url(../../images/webreview.png) center center / cover;
+  background: url(../images/webreview.png) center center / cover;
 
   height: 70rem;
 
@@ -17,9 +20,8 @@
 .coffe-box {
   display: grid;
 
-  @include for-size("700px"){
-
-      grid-template-columns: 40rem 40rem;
+  @include for-size('700px') {
+    grid-template-columns: 40rem 40rem;
   }
   grid-auto-rows: 35rem;
   justify-content: center;
@@ -53,6 +55,128 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+    }
+  }
+}
+
+.styleguide {
+  border-left: 1px solid rgba(26, 25, 25, 0.664);
+  padding: 0 1rem !important;
+
+  @include for-size('500px') {
+    padding-left: 6rem !important;
+  }
+
+  div {
+    margin: 0;
+  }
+
+  main {
+    font-size: 2rem;
+
+    @include for-size('700px') {
+      display: flex;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+  }
+
+  &__typeface {
+    & > div {
+      padding-top: 1rem;
+    }
+
+    h3 {
+      font-weight: 300;
+    }
+
+    .didot {
+      p {
+        font-family: didot;
+      }
+    }
+
+    .questrial {
+      margin-top: 2rem;
+      p {
+        font-family: questrial;
+      }
+    }
+  }
+
+  &__colors {
+    margin-top: 8rem;
+    gap: 12rem;
+
+    li {
+      div {
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .square {
+      width: 10rem;
+      height: 10rem;
+      background: red;
+
+      &--brown {
+        background: $brown;
+      }
+
+      &--white {
+        background: #e6e7e6;
+      }
+
+      &--dark {
+        background: #262525;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 8rem;
+    gap: 3rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 0;
+
+      button {
+        background: $brown;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 1rem 2rem;
+        border: none;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        color: $brown;
+      }
+
+      .links {
+        border: 1px solid $brown;
+        padding: 1rem 2rem;
+      }
+
+      .buttons {
+        display: block;
+
+        @include for-size('700px') {
+          display: flex;
+        }
+      }
     }
   }
 }

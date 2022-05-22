@@ -2,18 +2,15 @@
 @use '../abstracs/mixins' as *;
 
 .side {
-  z-index: -1 !important;
-  position: sticky;
-  top: 0;
-  padding-top: 7rem;
-  display: none;
+  display: none !important;
 
   @include for-size(1000px) {
-    display: block;
+    display: block !important;
   }
 }
 
 .title-side {
+  position: fixed;
   font-size: 2rem;
   display: inline-block;
   transform: rotate(-90deg);
@@ -39,18 +36,24 @@
     font-weight: 700;
   }
 
-  p {
+  a {
     display: inline-block;
     border: 3px solid $black;
     padding: 1rem;
+    color: $black;
+    text-decoration: none;
   }
 }
 
 .button-side {
-  text-align: end;
+  position: fixed;
   padding-top: 10rem;
+  right: 0;
+  bottom: 25rem;
 
-  button {
+  a {
+    display: inline-block;
+    text-decoration: none;
     transform: rotate(90deg);
     color: $yellow;
     background-color: $black;

@@ -2,6 +2,14 @@
   font-family: futura;
   src: url(../font/FuturaPTMedium.otf);
 }
+@font-face {
+  font-family: didot;
+  src: url(../font/Didot\ Regular.ttf);
+}
+@font-face {
+  font-family: questrial;
+  src: url(../font/Questrial-Regular.ttf);
+}
 *,
 *::after,
 *::before {
@@ -14,6 +22,7 @@ html {
   font-family: futura, sans-serif;
   font-size: 31.25%;
   color: #333331;
+  scroll-behavior: smooth;
 }
 @media (min-width: 400px) {
   html {
@@ -41,6 +50,10 @@ button {
   cursor: pointer;
 }
 
+.obj-cover {
+  object-fit: cover;
+}
+
 .c-white {
   color: white;
 }
@@ -50,7 +63,7 @@ button {
 }
 
 .bg-gray {
-  background: #e6e7e6;
+  background: #d4d1d1;
 }
 
 .d-flex {
@@ -145,6 +158,10 @@ button {
   font-size: 2rem !important;
 }
 
+.fs-3 {
+  font-size: 3rem !important;
+}
+
 .fs-4 {
   font-size: 4rem !important;
 }
@@ -163,6 +180,10 @@ button {
 
 .txt-end {
   text-align: end;
+}
+
+.font-didot {
+  font-family: didot;
 }
 
 .underLine {
@@ -277,6 +298,75 @@ button {
 }
 .btn--brown {
   background: #A99384;
+}
+
+.logo-box--purple__image {
+  border: 1px solid #622a69;
+  height: 35rem;
+}
+@media (min-width: 750px) {
+  .logo-box--purple__image {
+    width: 50rem;
+    height: 30rem;
+  }
+}
+.logo-box--purple__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo-box--purple__content {
+  background-color: #622a69;
+  color: white;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+}
+.logo-box--purple__content h4 {
+  font-weight: 300;
+}
+
+.logo-box--brown__image {
+  height: 50%;
+}
+.logo-box--brown__image img {
+  width: 100%;
+  border: 1px solid #a99384;
+  border-bottom: 0;
+  object-fit: cover;
+}
+@media (min-width: 700px) {
+  .logo-box--brown__image img {
+    height: 100% !important;
+  }
+}
+.logo-box--brown__content {
+  background: #a99384;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 4rem;
+}
+.logo-box--brown__content ul {
+  list-style: none;
+  color: white;
+}
+.logo-box--brown__content-colors {
+  font-size: 1.5rem;
+  padding-right: 5rem;
+}
+.logo-box--brown__content-colors li:nth-child(2) {
+  margin: 1rem 0;
+}
+.logo-box--brown__content-names {
+  font-size: 1.6rem;
+  border-left: 2px solid white;
+  padding-left: 5rem;
+}
+.logo-box--brown__content-names li:nth-child(2) {
+  margin: 2rem 0;
+}
+.logo-box--brown__content-names h3 {
+  font-weight: 400;
 }
 
 #myImg {
@@ -469,7 +559,7 @@ button {
     display: flex;
     gap: 4rem;
     padding: 0;
-    margin-top: -42.5rem;
+    margin-bottom: 15rem;
   }
 }
 .header__box-images {
@@ -515,19 +605,16 @@ button {
 }
 
 .side {
-  z-index: -1 !important;
-  position: sticky;
-  top: 0;
-  padding-top: 7rem;
-  display: none;
+  display: none !important;
 }
 @media (min-width: 1000px) {
   .side {
-    display: block;
+    display: block !important;
   }
 }
 
 .title-side {
+  position: fixed;
   font-size: 2rem;
   display: inline-block;
   transform: rotate(-90deg);
@@ -549,17 +636,23 @@ button {
   margin: 0;
   font-weight: 700;
 }
-.title-side p {
+.title-side a {
   display: inline-block;
   border: 3px solid #262525;
   padding: 1rem;
+  color: #262525;
+  text-decoration: none;
 }
 
 .button-side {
-  text-align: end;
+  position: fixed;
   padding-top: 10rem;
+  right: 0;
+  bottom: 25rem;
 }
-.button-side button {
+.button-side a {
+  display: inline-block;
+  text-decoration: none;
   transform: rotate(90deg);
   color: #ecc15d;
   background-color: #262525;
@@ -585,18 +678,17 @@ button {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: 100%;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 @media (min-width: 500px) {
   .ads__box {
     grid-template-columns: 30% 70%;
-    grid-auto-rows: 37rem;
+    grid-auto-rows: 45rem;
   }
 }
 .ads__box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .footer {
@@ -757,7 +849,6 @@ button {
 .information__box-image img {
   width: 100%;
   height: 20rem;
-  object-fit: cover;
 }
 .information__box-content h2 {
   font-size: 3rem;
@@ -769,6 +860,7 @@ button {
 
 .bigImage-2 {
   padding: 4rem 2rem;
+  padding-bottom: 10rem;
   overflow: hidden;
 }
 .bigImage-2 div {
@@ -911,7 +1003,7 @@ button {
 .product {
   background: #262525;
   color: whitesmoke;
-  padding: 2rem;
+  padding: 10rem 2rem;
   margin-top: 5rem;
 }
 .product__box {
@@ -930,7 +1022,7 @@ button {
   text-align: center;
 }
 .product__box main p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: justify;
 }
 .product__box main img {
@@ -1006,6 +1098,9 @@ button {
   background: #e6e7e6;
   padding: 2rem;
   margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .gift .box .big {
   flex: 2;
@@ -1023,7 +1118,7 @@ button {
 }
 
 .visitWebsite {
-  background: url(../../images/webreview.png) center center/cover;
+  background: url(../images/webreview.png) center center/cover;
   height: 70rem;
 }
 .visitWebsite div {
@@ -1069,6 +1164,104 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.styleguide {
+  border-left: 1px solid rgba(26, 25, 25, 0.664);
+  padding: 0 1rem !important;
+}
+@media (min-width: 500px) {
+  .styleguide {
+    padding-left: 6rem !important;
+  }
+}
+.styleguide div {
+  margin: 0;
+}
+.styleguide main {
+  font-size: 2rem;
+}
+@media (min-width: 700px) {
+  .styleguide main {
+    display: flex;
+  }
+}
+.styleguide main h2 {
+  font-weight: 400;
+}
+.styleguide__typeface > div {
+  padding-top: 1rem;
+}
+.styleguide__typeface h3 {
+  font-weight: 300;
+}
+.styleguide__typeface .didot p {
+  font-family: didot;
+}
+.styleguide__typeface .questrial {
+  margin-top: 2rem;
+}
+.styleguide__typeface .questrial p {
+  font-family: questrial;
+}
+.styleguide__colors {
+  margin-top: 8rem;
+  gap: 12rem;
+}
+.styleguide__colors li div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.styleguide__colors .square {
+  width: 10rem;
+  height: 10rem;
+  background: red;
+}
+.styleguide__colors .square--brown {
+  background: #a99384;
+}
+.styleguide__colors .square--white {
+  background: #e6e7e6;
+}
+.styleguide__colors .square--dark {
+  background: #262525;
+}
+.styleguide__buttons {
+  margin-top: 8rem;
+  gap: 3rem;
+}
+.styleguide__buttons div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0;
+}
+.styleguide__buttons div button {
+  background: #a99384;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  border: none;
+}
+.styleguide__buttons div ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  color: #a99384;
+}
+.styleguide__buttons div .links {
+  border: 1px solid #a99384;
+  padding: 1rem 2rem;
+}
+.styleguide__buttons div .buttons {
+  display: block;
+}
+@media (min-width: 700px) {
+  .styleguide__buttons div .buttons {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
