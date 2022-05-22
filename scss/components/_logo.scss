@@ -88,3 +88,38 @@ $brown: #a99384;
     }
   }
 }
+
+.logo-box--blue {
+  display: flex;
+
+  &__image {
+    border: 1px solid #3d3c3c;
+    width: 50%;
+
+    img {
+        object-fit: cover;
+    }
+  }
+
+  &__content {
+    font-size: 1.3rem;
+    padding: 5rem;
+    color: white;
+    background: #3d3c3c;
+
+    ul {
+      justify-content: center !important;
+      list-style: none;
+    }
+
+    li {
+      &:nth-child(2) {
+        margin: 2rem 0;
+      }
+    }
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+}

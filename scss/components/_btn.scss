@@ -1,6 +1,7 @@
 @use "../abstracs/color" as *;
 
 .btn {
+    color: $black;
     cursor: pointer;
     text-decoration: none;
     border: none;
